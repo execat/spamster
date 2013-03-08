@@ -1,0 +1,12 @@
+# Exclude the training set zip file
+naive/Data.zip
+
+# Exclude the training set unzipped folder
+naive/spam
+naive/ham
+
+# Exclude binaries
+naive/bin
+
+# Exclude result sets
+naive/*_result
