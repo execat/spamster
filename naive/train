@@ -1,0 +1,7 @@
+#!/bin/bash
+if [[ "$1" == "spam" ]]; then
+bin/naivebayesspamdetector -s $2
+else
+bin/naivebayesspamdetector -h $2
+fi
+

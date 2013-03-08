@@ -1,0 +1,12 @@
+#!/bin/bash
+p=`pwd`
+mkdir bin
+cd src
+g++ -o naivebayesspamdetector *.cpp
+mv naivebayesspamdetector ../bin
+cd $p
+bin/naivebayesspamdetector -i -none 4 -default &
+#bin/naivebayesspamdetector -i -none 4 -parserOff 0 3000 0.5 0 &
+#bin/naivebayesspamdetector -i -none 3 -parserON 2 1000 0.5 15 &
+
+
