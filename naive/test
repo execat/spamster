@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Initialization phase
+# ====================
+./initialize
+
+# Sleep until the initialization process is completed
+echo "Sleeping for 10 seconds till initialize is run"
+sleep 10
+
+# Training phase
+# ==============
+for f in spam/*; do ./train spam $f; #echo "$f from spamset trained"; done;
+done
+for f in ham/* ; do ./train ham  $f; #echo "$f from hamset trained" ; done;
+done
+
+# Keeping result files ready to record the classification results
+touch spam_result ham_result
+
+# Classification process
+# ======================
+for f in spam/*; do ./classify $f #>> spam_result; done;
+done
+for f in ham/* ; do ./classify $f #>> ham_result ; done;
+done
+
+# Finalizing (closing of opened ports)
+# ====================================
+./finalize
