@@ -1,4 +1,0 @@
-#!/bin/bash
-bin/naivebayesspamdetector -t auxfile
-rm -r bin
-echo done

@@ -1,3 +1,0 @@
-#!/bin/bash
-line="`./bin/naivebayesspamdetector -c $1 $2 $3`"
-echo $line
