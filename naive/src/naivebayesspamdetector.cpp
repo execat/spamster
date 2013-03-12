@@ -272,7 +272,7 @@ int main(int argc, char *argv[])
 
         string filterOutput;
         filterOutput = "class=" + Class + " score=";
-        string scroreString = doubleToString (score);
+        string scroreString = doubleToString(score);
         filterOutput += scroreString + " tfile=" + argv[2];
         if(so_messageVector.size() == 4)
           filterOutput += label;
@@ -283,6 +283,7 @@ int main(int argc, char *argv[])
           {
             ClientSocket client_socket ("localhost", 32168);
             client_socket << filterOutput;
+
             notConnected = false;
           }
           catch (SocketException e)
